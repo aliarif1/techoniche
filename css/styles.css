@@ -5,6 +5,7 @@
   --color-primary: #be0d28;
   --color-secondary: #e64848;
   --color-grey: rgb(240, 240, 240);
+  --color-dark-grey: #EEC1C8;
 }
 
 
@@ -17,27 +18,9 @@
 }
 
 html {
-    // This defines what 1rem is
-    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
-
-    /* @include respond(tab-land) { // width < 1200 ?
-        font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%
-    }
-
-    @include respond(tab-port) { // width < 900 ?
-        font-size: 50%; // 1rem = 8px; 8px/16px = 50%
-    }
-
-    @include respond(big-desktop) {
-        font-size: 75%; // 1rem = 12px; 12px/16px = 75%
-    } */
- 
+    /* This defines what 1rem is */
+    /* font-size: 62.5%;  1rem = 10px; 10px/16px = 62.5%  */
 }
-
-/* ::selection {
-    background-color: $color-primary;
-    color: $color-white;
-} */
 
 body {
   font-family: "Montserrat";
@@ -79,11 +62,17 @@ p {
 
 /* Containers */
 
-
-
 .container-fluid {
   padding: 7% 10%;
 }
+
+.container-nav {
+  padding: 0 5%;
+  border-bottom: 1px solid var(--color-dark-grey);
+}
+
+
+
 
 
 /* Sections */
@@ -107,9 +96,7 @@ p {
 
 /* Navigation Bar */
 
-
 .navbar {
-  padding: 0 0 4.5rem;
   z-index: 2;
 }
 
@@ -120,7 +107,6 @@ p {
 }
 
 .navbar-nav {
-  padding-top: 2rem;
   text-align: center;
 }
 
@@ -133,8 +119,12 @@ p {
   font-size: 1.2rem;
   color: white;
   margin-bottom: 3px;
+  transition: all .3s;
 }
 
+.nav-link:hover {
+  border-bottom: 1px solid var(--color-dark-grey);
+}
 
 
 
@@ -153,7 +143,6 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: var(--color-primary); */
   z-index: 1;
 }
 
@@ -163,6 +152,10 @@ p {
 
 
 /* Title Section */
+
+#title {
+  padding-top: 1rem;
+}
 
 #title .container-fluid {
   padding: 3% 15% 7%;
@@ -208,7 +201,6 @@ p {
   padding: 4%;
   text-align: center;
   transition: all .3s;
-  transition: all .2s;
   margin-bottom: 1rem;
 }
 
@@ -229,6 +221,10 @@ p {
 .card:hover {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
   transform: translateY(-5px);
+}
+
+.card:hover .feature-title {
+  transform: scale(1.1);
 }
 
 .services-btn {
@@ -265,6 +261,7 @@ p {
 .feature-title {
   color: var(--color-primary);
   font-size: 1.5rem;
+  transition: all .3s;
 }
 
 .feature-box {
@@ -331,6 +328,7 @@ p {
 .globe {
   margin-top: 2rem;
   width: 50%;
+  opacity: .6;
 }
 
 
@@ -525,15 +523,24 @@ p {
 }
 
 
-/* .input:focus {
-  border: none;
-} */
-
-/* .input:is(:focus, :valid) {
-  border: none;
-} */
 
 
+
+
+/* FAQs */
+
+.faq {
+  background-color: var(--color-grey);
+}
+
+.accordion {
+  margin-top: 2rem;
+}
+
+.accordion-body {
+  text-align: left;
+  color: grey;
+}
 
 
 
@@ -599,6 +606,11 @@ p {
     height: 100%;
   }
 
+  .container-nav {
+    padding: 2% 15%;
+  }
+  
+
   .nav-link {
     border: 1px dashed var(--color-secondary);
   }
@@ -632,6 +644,11 @@ p {
     margin-bottom: 1rem;
   }
 
+  .faq .section-heading {
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
   .content {
     flex-direction: column;
   }
@@ -641,3 +658,4 @@ p {
   }
 
 }
+
