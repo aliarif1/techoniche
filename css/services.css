@@ -1,0 +1,316 @@
+/* 
+  Variables
+*/
+:root {
+    --color-primary: #be0d28;
+    --color-secondary: #e64848;
+    --color-grey: rgb(240, 240, 240);
+    --color-dark-grey: #EEC1C8;
+  }
+  
+  
+  *,
+  *::after,
+  *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+  }
+  
+  html {
+      // This defines what 1rem is
+      font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  }
+  
+  body {
+    font-family: "Montserrat";
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat";
+    font-weight: 900;
+  }
+  
+  p {
+    color: #8f8f8f;
+    font-size: 1.3rem;
+  }
+  
+  
+  
+  
+  
+  /* Headings */
+  
+  .big-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    font-weight: 900;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  
+  
+  
+  
+  
+  /* Containers */
+
+  .container-fluid {
+    padding: 7% 10%;
+  }
+  
+  .container-nav {
+    padding: 0 5%;
+  }
+  
+
+
+
+
+  /* Sections */
+  .colored-section {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+  
+  .grey-section {
+    background-color: var(--color-grey);
+    color: black;
+  }
+  
+  .white-section {
+    background-color: #fff;
+  }
+  
+  
+  
+  
+  
+  /* Navigation Bar */
+  
+  .navbar {
+    z-index: 2;
+  }
+  
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-family: "Montserrat-light";
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 3px;
+  }
+  
+  .services-link {
+      border-bottom: 1px solid var(--color-dark-grey);
+  }
+
+  .nav-link:hover {
+    border-bottom: 1px solid var(--color-dark-grey);
+  }
+  
+  
+
+
+  
+  
+  /* Services Section */
+  
+  #services {
+    background-color: var(--color-grey);
+    /* text-align-last: left; */
+  }
+  
+  .spacer-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    gap: 5px;
+  }
+  
+  .line {
+    width: 10%;
+    height: 2px;
+    background-color: currentColor;
+  }
+  
+  .fa-square {
+    transform: rotate(45deg);
+  }
+  
+  .card {
+    background-color: var(--color-grey);
+    border: none;
+    padding: 2% 4%;
+    text-align: left;
+    transition: all .3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    transform: translateY(-5px);
+  }
+
+
+
+  
+  
+  
+  /* Features Section*/
+  
+  
+  #features {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .feature-title {
+    color: var(--color-primary);
+    font-size: 2rem;
+    transition: all .3s;
+  }
+  
+  .feature-box {
+    padding: 5%;
+  }
+  
+  .icon {
+    color: var(--color-primary);
+  }
+  
+  .icon:hover {
+    color: var(--color-secondary);
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Footer Section */
+  
+  .social-icon {
+    padding: 20px 10px;
+  }
+  
+  
+  
+  
+  
+  
+  /* Media Queries */
+  
+  
+  @media (max-width: 1020px) {
+  
+    #title {
+      text-align: center;
+    }
+  
+    .title-image {
+      position: static;
+      transform: rotate(0);
+      width: 50%;
+    }
+  
+  }
+  
+  @media (max-width: 700px) {
+  
+    html {
+      font-size: 50%; // 1rem = 8px; 8px/16px = 50%
+    }
+  
+    p {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 3rem;
+    }
+  
+    h4 {
+      font-size: 4rem;
+    }
+  
+    .big-heading {
+      font-size: 4rem;
+      line-height: 1.5;
+      font-weight: 900;
+    }
+    
+    .section-heading {
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+
+    .container-nav {
+      padding: 0 15%;
+    }
+  
+    .nav-link {
+      border: 1px dashed var(--color-secondary);
+    }
+  
+    #title .big-heading {
+      margin-bottom: 5rem;
+    }
+  
+    .feature-title {
+      font-size: 2rem;
+    }
+  
+    .card {
+      margin: 0 auto 1rem;
+      max-width: 90%;
+      text-align: center;
+    }
+  
+    .w {
+      border-bottom: none;
+    }
+  
+    .about {
+      text-align: center;
+    }
+  
+    .about__text {
+      max-width: 100%;
+    }
+  
+    .email-input {
+      margin-bottom: 1rem;
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .box {
+      width: 100%;
+    }
+  
+  }
