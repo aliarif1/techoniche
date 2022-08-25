@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Techoniche</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon.ico">
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,13 +20,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
 
-    <!-- Local Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- Local Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
 
 
 </head>
 
 <body>
+
+
+  <!-- Nav Bar -->
+
+  <div class="colored-section container-nav">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+      <a class="navbar-brand" href="./">techoniche</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutUs">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </div>
+
 
   <!-- Hero -->
 
@@ -31,35 +68,9 @@
 
     <div class="container-fluid particles-section">
 
+      <!-- Particles -->
+
       <div id="particles-js"></div>
-
-      <!-- Nav Bar -->
-
-      <nav class="navbar navbar-expand-lg navbar-dark">
-
-        <a class="navbar-brand" href="./">techoniche</a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#aboutUs">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-
-        </div>
-
-      </nav>
 
       <!-- Title -->
 
@@ -68,7 +79,6 @@
           <h1 class="big-heading">All your Digital Needs in one place</h1>
         </div>
         <div class="col-lg-6">
-          <!-- <img class="title-image" src="images/iphone6.png" alt="iphone-mockup"> -->
         </div>
       </div>
 
@@ -157,7 +167,7 @@
           
         </div>
 
-        <a href="#services" class="services-btn">View All</a>
+        <a href="./services.html" class="services-btn">View All</a>
 
       </div>
 
@@ -210,7 +220,7 @@
           <em>Will Smith, New York</em>
         </div>
         <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+          <h2 class="testimonial-text">If you want to build a cloud-based platform, but your business has limited funds, I recommend Techoniche.</h2>
           <em>Jane, Illinois</em>
         </div>
       </div>
@@ -325,6 +335,87 @@
 
       </div>
 
+    </div>
+
+  </section>
+
+
+  <!-- FAQs -->
+
+  <section class="faq">
+
+    <div class="container-fluid">
+      <div class="section-heading">Frequently Asked Questions</div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              I like your services and I'm ready to start. Where do I begin?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">To get started, just leave an email or give us a call. We got you!</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              We have got an idea, but we would like to verify it. What shall we do in this case?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">It does not always make sense to invest all your time and budget resources for the immediate launch of a large project. The trouble is that the project may fail to meet the actual market needs. Therefore, if you have an idea, but you are not entirely sure of it, we recommend you test the concept with an MVP development.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              How much does a website cost?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The cost of a website varies depending on what you need. Our website company does not have set packages, but rather design sites around what you want and need. Smaller sites that don’t require a lot of programming will cost a lot less than those requiring extensive programming. Give our website design team a call if you are looking for an estimate for your site.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Should I be familiar with the technical details to work with you?
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">There is absolutely no need for this. After all, you do not have to know medical nuances when seeking a dentist’s services. You do not have to be an expert in software development because, actually, we are. We are ready to explain to you all unclear moments and the essence of all stages while working on the project.
+            On your part, all you need is a clear vision of what objectives you want to achieve using the desired software product. Therefore, you just have to focus on your needs, and we will help you make them a reality.</div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              What information do you need from me to start work?
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Share the details of your project – like scope, timeframes, or business challenges you’d like to solve.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+              Will you sign an NDA?
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Yes, sure. If you want to sign an NDA, we are always ready to do so.</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
   </section>
