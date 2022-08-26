@@ -211,10 +211,48 @@
   
   
   /* Footer Section */
-  
-  .social-icon {
-    padding: 20px 10px;
-  }
+
+footer {
+  background-color: var(--color-primary);
+}
+
+footer span, 
+footer i, 
+footer p {
+  font-size: .9rem;
+  color: white;
+}
+
+.footer-list {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.footer-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.phone-icon {
+  padding-bottom: .9rem;
+  margin-right: .5rem;
+}
+
+.location-icon {
+  padding-bottom: .9rem;
+  margin-right: .5rem;
+}
+
+.social-icon {
+  padding: 20px 10px;
+}
   
   
   
@@ -222,21 +260,6 @@
   
   
   /* Media Queries */
-  
-  
-  @media (max-width: 1020px) {
-  
-    #title {
-      text-align: center;
-    }
-  
-    .title-image {
-      position: static;
-      transform: rotate(0);
-      width: 50%;
-    }
-  
-  }
   
   @media (max-width: 700px) {
   
@@ -288,29 +311,73 @@
       max-width: 90%;
       text-align: center;
     }
-  
-    .w {
-      border-bottom: none;
+
+    footer {
+      padding: 4rem 0;
     }
+    
+    footer span, 
+    footer i, 
+    footer p {
+    font-size: 1.2rem;
+  }
   
-    .about {
-      text-align: center;
-    }
-  
-    .about__text {
-      max-width: 100%;
-    }
-  
-    .email-input {
-      margin-bottom: 1rem;
-    }
-  
-    .content {
+    .footer-list {
       flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      padding: 0;
+    }
+    
+    .footer-group {
+      align-items: flex-start;
+    }
+    
+    .footer-item {
+      padding: 0;
+      margin: 0;
+      max-height: 2rem;
+      display: flex;
+      align-items: flex-end;
     }
   
-    .box {
-      width: 100%;
+    .footer-group-one {
+      padding-top: 1rem;
+      transform: translateX(-1.1rem);
+      gap: .8rem;
+    }
+  
+    .instagram-icon i {
+      width: .1rem;
+      height: .1rem;
+      margin-right: .5rem;
+    }
+  
+    .mail-icon i {
+      width: .1rem;
+      height: .1rem;
+      margin-right: .5rem;
     }
   
   }
+
+  
+
+
+
+
+
+
+  /* Scroll Animation */
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}

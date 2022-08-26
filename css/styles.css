@@ -47,7 +47,9 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-size: 3.5rem;
   line-height: 1.5;
+  letter-spacing: 5;
   font-weight: 900;
+  width: 50%;
 }
 
 .section-heading {
@@ -130,17 +132,27 @@ p {
 
 
 
+.hero-wrap {
+  position: relative;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
 /* Particles */
 
-.particles-section {
+/* .particles-section {
   position: relative;
-  height: 100vh;
-}
+  height: 90vh;
+} */
 
 #particles-js{
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -151,23 +163,56 @@ p {
 
 
 
-/* Title Section */
+/* Arrows */
 
-#title {
-  padding-top: 1rem;
-}
-
-#title .container-fluid {
-  padding: 3% 15% 7%;
-  text-align: left;
-}
-
-.title-image {
-  right: 20%;
-  width: 23%;
-  transform: rotate(25deg);
+.arrows {
+  width: 60px;
+  height: 72px;
   position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
 }
+
+.arrows path {
+  stroke: var(--color-dark-grey);
+  fill: transparent;
+  stroke-width: 1px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
 
 
 
@@ -233,9 +278,9 @@ p {
   border: none;
   text-decoration: none;
   border-bottom: 1px solid var(--color-primary);
-  transition: all .2s;
   margin-top: 1rem;
   font-size: 1.3rem;
+  transition: all .2s;
 }
 
 .services-btn:hover {
@@ -245,6 +290,7 @@ p {
   border-radius: 3px;
   font-size: 1.4rem;
 }
+
 
 
 
@@ -492,7 +538,6 @@ p {
   transform: translateX(-.6rem);
 }
 
-
 .btn-contact {
   margin: 0 auto;
   color: white;
@@ -545,7 +590,47 @@ p {
 
 
 
+
+
 /* Footer Section */
+
+footer {
+  background-color: var(--color-primary);
+}
+
+footer span, 
+footer i, 
+footer p {
+  font-size: .9rem;
+  color: white;
+}
+
+.footer-list {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.footer-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.phone-icon {
+  padding-bottom: .9rem;
+  margin-right: .5rem;
+}
+
+.location-icon {
+  padding-bottom: .9rem;
+  margin-right: .5rem;
+}
 
 .social-icon {
   padding: 20px 10px;
@@ -610,13 +695,13 @@ p {
     padding: 2% 15%;
   }
   
-
   .nav-link {
     border: 1px dashed var(--color-secondary);
   }
 
-  #title .big-heading {
-    margin-bottom: 5rem;
+  .big-heading {
+    font-size: 4.5rem;
+    width: 80%;
   }
 
   .feature-title {
@@ -626,6 +711,10 @@ p {
   .card {
     margin: 0 auto 1rem;
     max-width: 90%;
+  }
+
+  .line {
+    width: 20%;
   }
 
   .w {
@@ -640,15 +729,6 @@ p {
     max-width: 100%;
   }
 
-  .email-input {
-    margin-bottom: 1rem;
-  }
-
-  .faq .section-heading {
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-
   .content {
     flex-direction: column;
   }
@@ -657,5 +737,131 @@ p {
     width: 100%;
   }
 
+  .box:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .email-input {
+    margin-bottom: 1rem;
+  }
+
+  .input-group {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-grey);
+    font-size: 1.3rem;
+  }
+  
+  .input-label {
+    font-size: 1rem;
+  }
+  
+  .input,
+  .form-select,
+  .form-control {
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+  }
+
+  .btn-contact {
+    width: 150px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .faq .section-heading {
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .accordion button {
+    font-size: 1.5rem;
+  }
+
+  .accordion-body {
+    font-size: 1.4rem;
+  }
+
+  footer {
+    padding: 4rem 0;
+  }
+
+  footer span, 
+  footer i, 
+  footer p {
+  font-size: 1.2rem;
 }
 
+  .footer-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0;
+  }
+  
+  .footer-group {
+    align-items: flex-start;
+  }
+  
+  .footer-item {
+    padding: 0;
+    margin: 0;
+    max-height: 2rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .footer-group-one {
+    padding-top: 1rem;
+    transform: translateX(-1.1rem);
+    gap: .8rem;
+  }
+
+  .instagram-icon i {
+    width: .1rem;
+    height: .1rem;
+    margin-right: .5rem;
+  }
+
+  .mail-icon i {
+    width: .1rem;
+    height: .1rem;
+    margin-right: .5rem;
+  }
+
+}
+
+
+
+
+
+
+/* Scroll Animation */
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*
+
+  seperate nav                      (done)
+  fade in on scroll                 (done)
+  fade in on scroll - services page (done)
+  seperate services page            (done)
+  skill hover title animation       (done)
+  contact popup - whatsapp-email    (    )
+  faq section                       (done)
+  populate footer                   (done)
+  email functionality               (    )
+  scroll down animation             (done)
+
+*/
