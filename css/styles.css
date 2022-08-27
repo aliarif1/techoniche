@@ -108,6 +108,11 @@ p {
   font-weight: bold;
 }
 
+.nav-logo,
+.footer-logo {
+  width: 50%;
+}
+
 .navbar-nav {
   text-align: center;
 }
@@ -694,6 +699,13 @@ footer p {
   .container-nav {
     padding: 2% 15%;
   }
+
+  .navbar-brand {
+    display: inline;
+    width: 80%;
+    margin: 0;
+    text-align: left;
+  }
   
   .nav-link {
     border: 1px dashed var(--color-secondary);
@@ -861,7 +873,8 @@ footer p {
   contact popup - whatsapp-email    (    )
   faq section                       (done)
   populate footer                   (done)
-  email functionality               (    )
   scroll down animation             (done)
+  email functionality               (done) *******
+  hosting                           (    )
 
 */
