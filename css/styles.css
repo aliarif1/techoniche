@@ -6,6 +6,8 @@
   --color-secondary: #e64848;
   --color-grey: rgb(240, 240, 240);
   --color-dark-grey: #EEC1C8;
+  --color-header: rgb(160, 11, 11);
+  --color-footer: var(--color-header);
 }
 
 
@@ -69,6 +71,7 @@ p {
 }
 
 .container-nav {
+  background-color: var(--color-header);
   padding: 0 5%;
   border-bottom: 1px solid var(--color-dark-grey);
 }
@@ -600,7 +603,7 @@ p {
 /* Footer Section */
 
 footer {
-  background-color: var(--color-primary);
+  background-color: var(--color-footer);
 }
 
 footer span, 
@@ -862,3 +865,19 @@ footer p {
   transform: translateY(0);
   opacity: 1;
 }
+
+/*
+
+  seperate nav                      (done)
+  fade in on scroll                 (done)
+  fade in on scroll - services page (done)
+  seperate services page            (done)
+  skill hover title animation       (done)
+  contact popup - whatsapp-email    (    )
+  faq section                       (done)
+  populate footer                   (done)
+  scroll down animation             (done)
+  email functionality               (done) *******
+  hosting                           (    )
+
+*/

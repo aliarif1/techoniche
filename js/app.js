@@ -91,7 +91,7 @@ btn.addEventListener('click', () => {
     Subject : form.elements["subject"].value,
     Body : form.elements["message"].value + "<br>" + form.elements["name"].value + "<br>" + form.elements["phone"].value
   }).then(
-    message => alert("Email successufully sent!")
+    message => alert("Email sent!")
   );
 })
 
