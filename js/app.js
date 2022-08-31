@@ -76,23 +76,28 @@ window.addEventListener("scroll", () => {
 })
 
 
-// Email functionality
+// Email functionality using email.js
 
 const form = document.querySelector('form')
 const btn = document.querySelector('.btn-contact')
 
 btn.addEventListener('click', () => {
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "aliarif12333@gmail.com",
-    Password : "E5F7E41ADC41410ABB7D2ABE59A2BE95927C",
-    To : 'contact@techoniche.com',
-    From : form.elements["email"].value,
-    Subject : form.elements["subject"].value,
-    Body : form.elements["message"].value + "<br>" + form.elements["name"].value + "<br>" + form.elements["phone"].value
-  }).then(
-    message => alert("Email sent!")
-  );
+  const params = {
+    name: form.elements["name"].value,
+    email: form.elements["email"].value,
+    phone: form.elements["phone"].value,
+    subject: form.elements["subject"].value,
+    message: form.elements["message"].value,
+  }
+  emailjs.send("service_kqynv4b", "template_q9q0ofm", params).then( (res) => {
+    if (res.status === 200) {
+      alert("Email Sent!")
+      console.log("Status Code: " + res.status)
+    } else {
+      alert("Error! Status code: " + res.status)
+      console.log("Status Code: " + res.status)
+    }
+  })
 })
 
 
