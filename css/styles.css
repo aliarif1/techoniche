@@ -613,6 +613,10 @@ footer p {
   color: white;
 }
 
+footer a {
+  text-decoration: none;
+}
+
 .footer-list {
   display: flex;
   padding: 1rem;
