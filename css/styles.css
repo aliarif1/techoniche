@@ -117,7 +117,7 @@ p {
 }
 
 .navbar-nav {
-  text-align: center;
+  text-align: left;
 }
 
 .nav-item {
@@ -132,8 +132,12 @@ p {
   transition: all .3s;
 }
 
-.nav-link:hover {
-  border-bottom: 1px solid var(--color-dark-grey);
+.fa-chevron-right {
+  color: var(--color-primary);
+  display: none;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 
@@ -704,18 +708,50 @@ footer a {
   }
 
   .container-nav {
-    padding: 2% 15%;
+    padding: 0;
+  }
+
+  .navbar {
+    padding: 0;
   }
 
   .navbar-brand {
     display: inline;
     width: 80%;
     margin: 0;
+    padding: 2% 0;
+    padding-left: 5%;
     text-align: left;
   }
+
+  .navbar-toggler {
+    margin-right: 5%;
+    font-size: 1.8rem;
+  }
+
+  .navbar-nav {
+    background-color: white;
+  }
   
-  .nav-link {
-    border: 1px dashed var(--color-secondary);
+  .navbar-dark .navbar-nav .nav-item {
+    padding: 0;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-top: 1px dashed gray;
+    color: black;
+    padding: 1rem 2rem;
+    margin: 0;
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .fa-chevron-right {
+    display: inline;
   }
 
   .big-heading {
@@ -869,19 +905,3 @@ footer a {
   transform: translateY(0);
   opacity: 1;
 }
-
-/*
-
-  seperate nav                      (done)
-  fade in on scroll                 (done)
-  fade in on scroll - services page (done)
-  seperate services page            (done)
-  skill hover title animation       (done)
-  contact popup - whatsapp-email    (    )
-  faq section                       (done)
-  populate footer                   (done)
-  scroll down animation             (done)
-  email functionality               (done) *******
-  hosting                           (    )
-
-*/
